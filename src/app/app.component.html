@@ -1,0 +1,99 @@
+
+<!-- Navigation Bar -->
+<div class="toolbar" role="banner">
+  <nav class="navs">
+    <a routerLink="/home" title="Главная">Главная</a>
+    <a routerLink="/news" title="Новости">Новости</a>
+    <a routerLink="/project-team" title="Команда проекта">Команда</a>
+  </nav>
+</div>
+
+<!-- FON - BOX -->
+<div class="fon-box">
+  <img class="fon1" src="assets/images/fon1.jpg">
+  <img class="ramka" src="assets/images/ramka.png">
+  <img class="fonGIF" src="assets/images/fonGIF.gif">
+  <img class="fonGIF-play" src="assets/images/fonGIF-play.jpg">
+  <img class="fonTitle" src="assets/images/fonTitle.png">
+  <img class="male" src="assets/images/fon3.png">
+  <img class="female" src="assets/images/fon2.png">
+</div>
+
+<!-- Main container-->
+<div class="content">
+  <div class="main-container">
+    <!-- Main navigation-->
+    <nav class="main-navigation">
+      <a routerLink="/home" class="main-navigation__item">Главная</a>
+      <a routerLink="/top-100-anime" class="main-navigation__item">ТОП 100</a>
+      <a routerLink="/anime" class="main-navigation__item">Аниме</a>
+      <a routerLink="/movies" class="main-navigation__item">Фильмы</a>
+      <a routerLink="/series" class="main-navigation__item">Сериалы</a>
+      <a routerLink="/catalog" class="main-navigation__item active-select">Каталог</a>
+    </nav>
+    <!-- Main navigation End-->
+
+    <!-- Content container-->
+    <router-outlet></router-outlet>
+
+  </div>
+</div>
+<!-- Main container End-->
+
+<!-- Finished releases-->
+<div class="finished-releases">
+  <div class="container">
+    <div class="finished-releases__wrapper">
+      <!-- Finished releases header-->
+      <div class="finished-releases__header">
+        <div class="h2 finished-releases__header__title widget__title">Завершённые релизы</div>
+      </div>
+      <!-- Finished releases header End-->
+      <!-- Finished releases list-->
+      <div class="finished-releases__list">
+        <div class="ads-list__item" *ngFor="let product of products">
+          <div class="ads-list__item__thumb"><img src="{{product.image1}}" style="width: 281.6px"></div>
+
+          <nav><h3 class="h3 ads-list__item__title"><a routerLink="/anime/{{product.id}}"
+                                                       title="{{product.name}}" class="h3 ads-list__item__title">{{product.name}}</a></h3></nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Finished releases End-->
+
+<!-- Footer-->
+<footer class="main-footer">
+  <div class="container">
+    <div class="main-footer__wrapper">
+      <div class="main-footer__news-subscribe main-footer__item">
+        <div class="h4 main-footer__item__title">Аниме</div>
+        <p class="p">Хочешь быть всегда в теме происходящего аниме мира? Хочешь знать о выходе новых аниме? Тогда заходи на наш аниме сайт почаще!  У нас всё самое новое из мира аниме!</p>
+      </div>
+      <div>
+        <img class="stay-home" src="assets/images/stay-home-logo.png">
+      </div>
+    </div>
+
+  </div>
+</footer>
+<!-- Footer End-->
+
+<!-- Copyright-->
+<div class="copyright">
+  <div class="container">
+    <div class="copyright__wrapper">
+      <p class="copyright__left-col">(C) Copyright "Ne-Korem.TV" 2019-2020</p>
+    </div>
+  </div>
+</div>
+<!-- Copyright End-->
+
+
+
+
+
+
+
+<!-- <app-messages></app-messages> -->

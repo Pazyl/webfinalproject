@@ -1,0 +1,127 @@
+
+<!-- Anime detail -->
+
+<!-- Content container-->
+<div class="content-container" *ngIf="product">
+  <!-- Content. Left block-->
+  <div class="content2">
+    <!-- Media-->
+    <div class="media">
+      <!-- Media post-->
+      <article class="media__post">
+        <div class="media__post__header">
+          <h1 class="media__post__title">{{product.name}}</h1>
+          <div class="media__post__original-title">{{product.alterName}}</div>
+        </div>
+
+        <div class="media__panel media__panel__gray">
+          <div class="media__post__body">
+            <p>{{product.description}}</p><br>
+          </div>
+
+          <div class="media__post__info">
+            <div class="col-1">
+              <div class="releases-date">
+                <p>Дата выпуска: <span class="date-color">с <a class="date-a" href="/catalog/releaseDate/{{product.releaseDate}}" title="Аниме онлайн {{product.releaseDate}} года">{{product.releaseDate}}</a> года</span></p>
+              </div>
+
+              <div class="status">
+                <p>Статус: <span class="date-color">{{product.status}}</span></p>
+              </div>
+            </div>
+
+            <div class="col-1">
+              <div class="studio">
+                <p>Студия: <a class="date-a" href="/catalog/studio/{{product.studio}}" title="Студия аниме {{product.studio}}">{{product.studio}}</a></p>
+              </div>
+
+              <div class="genre-tags">
+                <p>Жанр: <a class="date-a genre-name" href="https://online.animedia.tv/category/comedy" title="Жанр аниме онлайн Комедия">Комедия</a>
+                  <a class="date-a genre-name" href="https://online.animedia.tv/category/mistery" title="Жанр аниме онлайн Мистика">Мистика</a>
+                  <a class="date-a genre-name" href="https://online.animedia.tv/category/advanture" title="Жанр аниме онлайн Приключения">Приключения</a>
+                  <a class="date-a genre-name" href="https://online.animedia.tv/category/fantasy" title="Жанр аниме онлайн Фэнтези">Фэнтези</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!--Media post End-->
+      <!-- Media screenshots-->
+      <div class="media__sshots">
+        <h3 class="media__sshots__title h3">Скриншоты</h3>
+        <div class="media__sshots__list">
+          <li class="media__sshots__list__item">
+            <a href="" title="Увеличить" class="zoomLink">
+              <img data-src=""
+                   alt="Скриншот аниме {{product.name}}"
+                   title="Скриншот из аниме {{product.name}}"
+                   class="loaded"
+                   src="https://static.animedia.tv/uploads/13851/00000002.jpg?w=175">
+            </a>
+          </li>
+          <li class="media__sshots__list__item">
+            <a href="" title="Увеличить" class="zoomLink">
+              <img data-src=""
+                   alt="Скриншот аниме {{product.name}}"
+                   title="Скриншот из аниме {{product.name}}"
+                   class="loaded"
+                   src="https://static.animedia.tv/uploads/13851/00000002.jpg?w=175">
+            </a>
+          </li>
+          <li class="media__sshots__list__item">
+            <a href="" title="Увеличить" class="zoomLink">
+              <img data-src=""
+                   alt="Скриншот аниме {{product.name}}"
+                   title="Скриншот из аниме {{product.name}}"
+                   class="loaded"
+                   src="https://static.animedia.tv/uploads/13851/00000002.jpg?w=175">
+            </a>
+          </li>
+          <li class="media__sshots__list__item">
+            <a href="" title="Увеличить" class="zoomLink">
+              <img data-src=""
+                   alt="Скриншот аниме {{product.name}}"
+                   title="Скриншот из аниме {{product.name}}"
+                   class="loaded"
+                   src="https://static.animedia.tv/uploads/13851/00000002.jpg?w=175">
+            </a>
+          </li>
+          <li class="media__sshots__list__item">
+            <a href="" title="Увеличить" class="zoomLink">
+              <img data-src=""
+                   alt="Скриншот аниме {{product.name}}"
+                   title="Скриншот из аниме {{product.name}}"
+                   class="loaded"
+                   src="https://static.animedia.tv/uploads/13851/00000002.jpg?w=175">
+            </a>
+          </li>
+        </div>
+      </div>
+      <!-- Media screenshots End-->
+      <!-- Media sub information-->
+    </div>
+  </div>
+  <!-- Content. Left block End-->
+  <!-- Right sidebar-->
+  <div class="right-sidebar">
+    <!-- Post info widget-->
+    <div class="widget">
+      <div class="widget__post-info">
+        <div class="widget__post-info__poster">
+          <img src="{{product.image1}}" width="280">
+        </div>
+
+        <div class="widget__post-info__rating">
+
+        </div>
+
+        <div class="widget__post-info__btns">
+          <button type="button" class="btn btn-dark">СМОТРЕТЬ ТРЕЙЛЕР</button>
+          <button type="button" class="btn btn-red">МНЕ НРАВИТСЯ!</button>
+          <button type="button" class="btn btn-green">В ЗАКЛАДКИ</button>
+        </div>
+      </div>
+    </div>
+    <!-- Post info widget End-->
+  </div>
+</div>

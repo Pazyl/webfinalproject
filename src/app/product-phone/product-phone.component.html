@@ -1,0 +1,25 @@
+<!-- Load an icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<h2 style="text-align: center">КАТЕГОРИЯ: Смартфоны и телефоны</h2>
+
+<div class="body-window">
+  <div *ngFor="let product of products">
+    <div *ngIf="product.type === 1" class="card">
+      <img src="{{product.image1}}" class="img-fluid">
+      <div class="card-body">
+        <h4 class="card-title">{{product.name}}</h4>
+        <p class="card-text">product id: {{product.id}}</p>
+        <p class="card-text">Rating: {{product.rating}}</p>
+        <p class="card-text">{{product.price}} ₸</p>
+        <div class="social-link">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-telegram"></i></a>
+          <a href="#"><i class="fa fa-whatsapp"></i></a>
+        </div>
+        <a routerLink="/products/{{product.id}}"><button type="button">View Product</button></a>
+      </div>
+    </div>
+  </div>
+</div>

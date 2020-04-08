@@ -1,0 +1,301 @@
+
+body {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.toolbar {
+  height: 74px;
+  margin: -8px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  border: 0px;
+  z-index: 1;
+}
+
+.navs {
+  width: 748px;
+  height: auto;
+  margin: auto;
+}
+
+a {
+  padding: 0px 38px 0px 38px;
+  font-family: 'bebasNeue', sans-serif;
+  font-size: 16px;
+  color: #AEADAD;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #E70C2F;
+}
+
+.content {
+  width: 100%;
+  min-width: 300px;
+  max-width: 1260px;
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  bottom: 465.063px;
+  z-index: 3;
+}
+
+.main-navigation {
+  height: 57.6px;
+  background-color: #181818;
+  border-bottom: 5px solid #E70C2F;
+}
+
+.main-navigation__item {
+  display: block;
+  font-size: 20px;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-flex;
+  padding: 16px 30px 12px;
+  color: #FFF;
+}
+
+.active-select {
+  margin: -8px 0px 0px;
+  padding: 20px 30px 16px;
+  color: #FFF;
+  border: 5px solid #E70C2F;
+  background: #E70C2F;
+}
+.active-select:hover {
+  color: #FFF;
+}
+
+.fon-box {
+  width: 1481.6px;
+  height: 875.063px;
+  margin-left: -8px;
+  position: relative;
+  top: 8px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.fon1 {
+  width: 180%;
+  position: absolute;
+  left: -500px;
+}
+
+.female {
+  width: 313.2px;
+  position: absolute;
+  left: 900px;
+  top: 18px;
+  z-index: 2;
+}
+
+.male {
+  width: 390.19px;
+  position: absolute;
+  left: 205px;
+  top: 8px;
+  z-index: 2;
+}
+
+.ramka {
+  width: 522.08px;
+  position: absolute;
+  left: 490px;
+  top: 110px;
+  z-index: 2;
+}
+
+
+.fonGIF {
+  position: absolute;
+  left: 549px;
+  top: 145px;
+  z-index: 2;
+}
+
+.fonGIF-play {
+  position: absolute;
+  left: 549px;
+  top: 145px;
+  z-index: 2;
+}
+.fonGIF-play:hover {
+  display: none;
+}
+
+.fonTitle {
+  width: 224.74px;
+  position: absolute;
+  left: 628px;
+  top: 100px;
+  z-index: 2;
+}
+
+.main-footer {
+  width: 1481.6px;
+  height: 200px;
+  background: #282828;
+  display: block;
+  margin-left: -8px;
+}
+
+.container {
+  width: 1240px;
+  min-width: 300px;
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+
+}
+
+.main-footer__wrapper {
+  padding: 30px 0 30px 30px;
+}
+
+.main-footer__news-subscribe {
+  width: 280px;
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+  text-align: left;
+  float: left;
+}
+
+.main-footer__item {
+  position: relative;
+}
+
+.h4 {
+  font-size: 1.714285714em;
+  margin: 0;
+  font-family: 'leagueGothic', sans-serif;
+  line-height: 1;
+  font-weight: normal;
+}
+
+.main-footer__item__title {
+  margin-bottom: 22px;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+.p {
+  margin-bottom: 18px;
+  font-size: 0.928571429em;
+  color: #D7D3D3;
+  letter-spacing: 0.025em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.stay-home {
+  padding-left: 200px;
+}
+
+.copyright__wrapper {
+  padding: 15px 30px 0 30px;
+}
+
+.copyright__left-col {
+  float: left;
+  margin: 0px 0px 15px;
+  font-size: 0.928571429em;
+  line-height: 2.153846154em;
+  color: #999;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.finished-releases {
+  width: 1481.6px;
+  height: 611.950px;
+  position: relative;
+  background: #F3F3F3;
+  z-index: 20;
+  margin-left: -8px;
+}
+
+.finished-releases__wrapper {
+  padding: 40px 30px 50px 30px;
+}
+
+.finished-releases__header {
+  height: 51px;
+  padding-bottom: 7px;
+  border-bottom: 5px solid #E70C2F;
+}
+
+.h2 {
+  margin: 0;
+  color: #292929;
+  font-size: 36px;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: 700;
+  line-height: 64px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.finished-releases__header__title {
+  float: left;
+}
+
+.widget__title {
+  padding-left: 38.063px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.ads-list__item {
+  width: 281.6px;
+  padding: 0 10.050px;
+  margin: 15.075px 0;
+}
+
+.ads-list__item__thumb {
+  display: block;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.ads-list__item__title {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 7px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+h3 a {
+  margin: 0;
+  color: #292929;
+  font-family: 'bebasNeue', sans-serif;
+  text-transform: uppercase;
+}
+
+h3 a:hover {
+  color: #E70C2F;
+}
+
+.finished-releases__list {
+  margin: 0 -13.400px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

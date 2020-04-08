@@ -1,0 +1,8 @@
+
+<!-- Category Menu-->
+<h3 class="content">Все категории</h3>
+<div class="content2">
+  <a *ngFor="let category of categories" class="card card-small pos" routerLink="/categories/{{category.id}}/products">
+    <div> <h4 style="text-align: center"> {{category.type_name}} </h4> </div>
+  </a>
+</div>

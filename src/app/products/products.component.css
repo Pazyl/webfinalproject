@@ -1,0 +1,88 @@
+.body-window {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Style Card */
+.card {
+  position: relative;
+  width: 18em;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25em;
+  box-shadow: 0 .5em 1em rgba(0, 0, 0, .15);
+  margin: 18px;
+}
+
+/* Style Image */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: .25em;
+  vertical-align: middle;
+}
+
+/* Style Card body */
+.card-body {
+  padding: .5em 1em;
+}
+
+/* Style Card title */
+.card-title {
+  font-size: 2em;
+  font-weight: 300;
+  margin: .3em 0 .5em;
+}
+
+/* Style Card text */
+.card-text {
+  font-size: 1em;
+  font-weight: 300;
+  color: #555;
+}
+
+/* Style Social Link */
+.social-link {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3em;
+  margin: 1.3em 0;
+}
+
+/* Style Button */
+button {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  user-select: none;
+  outline: 0;
+  transition: .15s ease-in-out;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38,143,255,.5);
+}
+
+a {
+  text-decoration: none;
+}
+
+.selected {
+  background-color: #ffd007;
+}
