@@ -27,27 +27,41 @@
               </div>
 
               <div class="rating">
-                <p>Email: <span class="date-color"></span></p>
+                <p>Email: <span class="date-color">{{user.email}}</span></p>
               </div>
             </div>
 
             <div class="col-1">
               <div class="rating">
-                <p>Gender: <span class="date-color"></span></p>
+                <p>Gender: <span class="date-color">{{user.gender}}</span></p>
               </div>
 
               <div class="viewCount">
-                <p>Hometown: <span class="date-color"></span></p>
+                <p>Phone: <span class="date-color">{{user.phone}}</span></p>
               </div>
 
               <div class="viewCount">
-                <p>Birthday: <span class="date-color"></span></p>
+                <p>Birthday: <span class="date-color">{{user.birthday}}</span></p>
               </div>
             </div>
           </div>
         </div>
       </article>
       <!--Media post End-->
+    </div>
+
+    <!-- Likes -->
+    <div *ngIf="trueLikes">
+      <div *ngFor="let like of likes">
+        <p>{{like.name}}</p>
+      </div>
+    </div>
+
+    <!-- Zakladki -->
+    <div *ngIf="trueZakladki">
+      <div *ngFor="let zaktadka of zaktadki">
+        <p>{{zaktadka.name}}</p>
+      </div>
     </div>
   </div>
   <!-- Content. Left block End-->
@@ -63,10 +77,10 @@
         </div>
 
         <div class="widget__post-info__btns">
-          <button type="button" class="btn btn-red">МНЕ НРАВИТСЯ!</button>
-          <button type="button" class="btn btn-green">В ЗАКЛАДКИ</button>
+          <button type="button" class="btn btn-red" (click)="clickLikes()">МНЕ НРАВИТСЯ!</button>
+          <button type="button" class="btn btn-green" (click)="clickZakladki()">В ЗАКЛАДКИ</button>
 
-          <button type="button" class="btn btn-dark" onclick="document.getElementById('id01').style.display='block'">Change Name</button>
+          <button type="button" class="btn btn-dark"  onclick="document.getElementById('id01').style.display='block'">Change info</button>
         </div>
       </div>
     </div>
@@ -83,18 +97,31 @@
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
-    <!--
     <div class="container">
-      <label class="label-h" for="newName">Name:
-        <input type="text" [(ngModel)]="" placeholder="name" name="newName" required/>
-      </label>
-      <label class="label-h" for="newRating">Rating:
-        <input type="number" [(ngModel)]="" placeholder="rating" name="newRating" required/>
-      </label>
+      <form>
+        <label class="label-h" for="newName">First Name:
+          <input [(ngModel)]="user.firstname" type="text" placeholder="" name="firstname" required/>
+        </label>
+        <label class="label-h" for="newRating">Last Name:
+          <input [(ngModel)]="user.lastname" type="text" placeholder="" name="lastname" required/>
+        </label>
+        <label class="label-h" for="newRating">Email Name:
+          <input [(ngModel)]="user.email" type="email" placeholder="" name="email" required/>
+        </label>
+        <label class="label-h" for="newRating">Gender:
+          <input [(ngModel)]="user.gender" type="text" placeholder="" name="gender" required/>
+        </label>
+        <label class="label-h" for="newRating">Phone:
+          <input [(ngModel)]="user.phone" type="text" placeholder="" name="phone" required/>
+        </label>
+        <label class="label-h" for="newRating">Birthday:
+          <input [(ngModel)]="user.birthday" type="date" placeholder="" name="birthday" required/>
+        </label>
+      </form>
     </div>
-    -->
 
     <div class="container" style="background-color:#f1f1f1">
+      <button class="btn btn-green button2" (click)="save()">SAVE</button>
       <!-- <button (click)="save()" type="button" class="btn btn-green button2">SAVE</button> -->
     </div>
 

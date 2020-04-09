@@ -1,1 +1,33 @@
-<p>catalog works!</p>
+
+<div class="content-block">
+  <div class="left-block">
+
+    <h1 class="h1 rd">Поиск</h1>
+    <input [(ngModel)]="name" (input)="find()" placeholder="Введите текст для поиска">
+
+    <div class="box-animes">
+      <div class="view" *ngFor="let arr of films">
+        <button *ngIf="admin" class="but-x" (click)="deleteAnime(arr.id)">X Delete X</button>
+        <img src="{{arr.image1}}" class="image1">
+        <nav>
+          <h3 class="h3">
+            <a routerLink="/{{arr.catalogType}}/{{arr.id}}" class="h3">{{arr.name}}</a>
+          </h3>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-block">
+    <h3 class="h3 rd">Тип</h3>
+    <input id="film" class="inputCheck" type="checkbox" (click)="setFilm()">
+    <input id="anime" class="inputCheck" type="checkbox" (click)="setAnime()">
+    <input id="serial" class="inputCheck" type="checkbox" (click)="setSerial()">
+
+    <h3 class="h3 rd">Статус</h3>
+    <input id="status1" class="inputCheck" type="checkbox" (click)="setFinised()">
+    <input id="status2" class="inputCheck" type="checkbox" (click)="setWork()">
+
+  </div>
+</div>
+

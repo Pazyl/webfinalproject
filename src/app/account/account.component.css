@@ -487,7 +487,7 @@ span.psw {
 }
 
 /* Full-width input fields */
-input[type=text], input[type=password], input[type=number] {
+input[type=text], input[type=password], input[type=number], input[type=email], input[type=date] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;

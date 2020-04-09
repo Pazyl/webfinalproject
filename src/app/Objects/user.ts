@@ -5,11 +5,10 @@ export class User {
   firstname: string;
   lastname: string;
   roleID: number;
-  // roleID: number;
-  // genre: string;
-  // birthday: Date;
-  // phone: string;
-  // about: string;
+  email: string;
+  gender: string;
+  phone: string;
+  birthday: string;
 
   constructor() {
     this.id = null;
@@ -18,10 +17,9 @@ export class User {
     this.firstname = 'none';
     this.lastname = 'none';
     this.roleID = null;
-    // this.roleID = null;
-    // this.genre = 'none';
-    // this.birthday = null;
-    // this.phone = 'none';
-    // this.about = 'none';
+    this.email = 'none';
+    this.gender = 'none';
+    this.phone = 'none';
+    this.birthday = 'none';
   }
 }

@@ -6,10 +6,10 @@ export interface Movie {
   price: number;
   rating: number;
   viewCount: number;
-  status: string;//
+  status: string;
   releaseDate: number;
-  genre: string;//
-  studio: string;//
+  genre: string;
+  studio: string;
   image1: string;
   description: string;
   ageLimit: number;

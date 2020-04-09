@@ -113,9 +113,16 @@
           </div>
 
           <div class="commet-item" *ngFor="let comment of comments">
-            <h3 class="commet__item__username h3-user">{{comment.id_user}}</h3>
+            <h3 class="commet__item__username h3-user">{{comment.userName}}</h3>
             <h3 class="commet__item__text">
-              {{comment.comment}}
+              {{comment.text}}
+            </h3>
+          </div>
+
+          <div class="commet-item" *ngFor="let comment of commentJson">
+            <h3 class="commet__item__username h3-user">{{comment.userName}}</h3>
+            <h3 class="commet__item__text">
+              {{comment.text}}
             </h3>
           </div>
         </div>
@@ -126,21 +133,20 @@
   <!-- Content. Left block End-->
   <!-- Right sidebar-->
   <div class="right-sidebar">
-    <!-- Post info widget-->
     <div class="widget">
       <div class="widget__post-info">
         <div class="widget__post-info__poster">
           <img src="{{AMS.image1}}" width="280">
         </div>
 
-        <div class="widget__post-info__rating"></div>
 
         <div class="widget__post-info__btns">
           <button type="button" class="btn btn-dark">СМОТРЕТЬ ТРЕЙЛЕР</button>
-          <button type="button" class="btn btn-red">МНЕ НРАВИТСЯ!</button>
-          <button type="button" class="btn btn-green">В ЗАКЛАДКИ</button>
+          <button *ngIf="like" type="button" class="btn btn-red" (click)="addLikes(AMS.id)">МНЕ НРАВИТСЯ!</button>
+          <button *ngIf="zakladki" type="button" class="btn btn-green" (click)="addZakladki(AMS.id)">В ЗАКЛАДКИ</button>
 
-          <button type="button" class="btn btn-dark" onclick="document.getElementById('id01').style.display='block'">Change Name</button>
+          <button *ngIf="admin" type="button" class="btn btn-dark" onclick="document.getElementById('id01').style.display='block'">Change Name</button>
+          <button *ngIf="authValue" type="button" class="btn btn-dark" onclick="document.getElementById('addComment').style.display='block'">ADD Comment</button>
           <button type="button" class="btn btn-dark" (click)="goBack()">GO Back</button>
         </div>
       </div>
@@ -199,6 +205,29 @@
 
     <div class="container" style="background-color:#f1f1f1">
       <!-- <button (click)="save()" type="button" class="btn btn-green button2">SAVE</button> -->
+    </div>
+  </form>
+
+</div>
+
+
+<!-- ADD Comment -->
+
+<div id="addComment" class="modal">
+
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('addComment').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+        <label class="label-h" for="comment">Comment:<input [(ngModel)]="text" type="text" placeholder="Enter comment" name="text" required /></label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button class="btn btn-green button2" (click)="addComment()"
+              onclick="document.getElementById('addComment').style.display='none'">Add Comment</button>
+
     </div>
   </form>
 

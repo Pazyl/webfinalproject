@@ -1,0 +1,149 @@
+.content-block {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.left-block {
+  width: 860px;
+  padding: 8px 20px 0 30px;
+
+  background-color: white;
+}
+
+.right-block {
+  width: 310px;
+  padding: 27px 10px 20px 10px;
+  background-color: #f5f5f5f5;
+}
+
+.inputCheck {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#anime:after {
+  content: 'Anime';
+  color: #555555;
+  position: relative;
+  left: 20px;
+}
+
+#film:after {
+  content: 'Film';
+  color: #555555;
+  position: relative;
+  left: 20px;
+}
+
+#serial:after {
+  content: 'Serial';
+  color: #555555;
+  position: relative;
+  left: 20px;
+}
+
+#status1:after {
+  content: 'Finished';
+  color: #555555;
+  position: relative;
+  left: 20px;
+}
+
+#status2:after {
+  content: 'Work';
+  color: #555555;
+  position: relative;
+  left: 20px;
+}
+
+.box-animes {
+  background-color: #FFFFFF;
+  margin: 0 -15px;
+  padding: 30px 0 0 0;
+  border-bottom: 4px solid #E70C2F;
+
+}
+
+.view {
+  width: 281px;
+  margin: 0;
+  border: 0;
+  padding: 0 7px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.h1 {
+  margin: 15px 0;
+  color: #292929;
+  font-size: 36px;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+
+.image1 {
+  width: 280px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #E70C2F;
+}
+
+.h3 {
+  width: 280px;
+  margin: 7px 0;
+  color: #292929;
+  font-family: 'bebasNeue', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rd {
+  display: inline-flex;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color: #E70C2F;
+  font-size: 16px;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.but-x {
+  width: 280px;
+  height: 20px;
+  border: 0;
+  color: white;
+  background-color: #292929;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: 700;
+}
+
+.but-x:hover {
+  cursor: pointer;
+  color: #E70C2F;
+}

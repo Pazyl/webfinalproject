@@ -1,26 +1,57 @@
-<!-- Finished releases-->
-<div class="finished-releases">
-  <div class="container">
-    <div class="finished-releases__wrapper">
-      <!-- Finished releases header-->
-      <div class="finished-releases__header">
-        <div class="h2 finished-releases__header__title widget__title">Завершённые релизы</div>
-      </div>
-      <!-- Finished releases header End-->
-      <!-- Finished releases list-->
-      <div class="finished-releases__list">
-        <div class="ads-list__item" >
-          <div class="ads-list__item__thumb"><img src="" style="width: 281.6px"></div>
 
-          <nav>
-            <h3 class="h3 ads-list__item__title">
-              <a routerLink="" title=""
-                 class="h3 ads-list__item__title"></a>
-            </h3>
-          </nav>
-        </div>
-      </div>
-    </div>
+<!-- HOME -->
+
+<div class="box-animes">
+  <div class="">
+    <h1 class="h1 rd">АНИМЕ</h1>
+    <button class="next h1" (click)="minus(index1, index2)" style="margin-left: 30px"><</button>
+    <button class="prev h1" (click)="plus(index1, index2)">></button>
+  </div>
+
+  <div class="view" *ngFor="let anime of animes.slice(index1, index2)">
+    <img src="{{anime.image1}}" class="image1">
+
+    <nav>
+      <h3 class="h3">
+        <a routerLink="/{{anime.catalogType}}/{{anime.id}}" class="h3">{{anime.name}}</a>
+      </h3>
+    </nav>
   </div>
 </div>
-<!-- Finished releases End-->
+
+<div class="box-animes">
+  <div class="">
+    <h1 class="h1 rd">ФИЛЬМЫ</h1>
+    <button class="next h1" (click)="minus2(index12, index22)" style="margin-left: 30px"><</button>
+    <button class="prev h1" (click)="plus2(index12, index22)">></button>
+  </div>
+
+  <div class="view" *ngFor="let m of movies.slice(index12, index22)">
+    <img src="{{m.image1}}" class="image1">
+
+    <nav>
+      <h3 class="h3">
+        <a routerLink="/{{m.catalogType}}/{{m.id}}" class="h3">{{m.name}}</a>
+      </h3>
+    </nav>
+  </div>
+</div>
+
+<div class="box-animes">
+  <div class="">
+    <h1 class="h1 rd">СЕРИАЛЫ</h1>
+    <button class="next h1" (click)="minus3(index13, index23)" style="margin-left: 30px"><</button>
+    <button class="prev h1" (click)="plus3(index13, index23)">></button>
+  </div>
+
+  <div class="view" *ngFor="let s of serials.slice(index13, index23)">
+    <img src="{{s.image1}}" class="image1">
+
+    <nav>
+      <h3 class="h3">
+        <a routerLink="/{{s.catalogType}}/{{s.id}}" class="h3">{{s.name}}</a>
+      </h3>
+    </nav>
+  </div>
+</div>
+

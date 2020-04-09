@@ -63,6 +63,7 @@ export class AppComponent implements OnInit {
         this.valueOut = true;
       }
     });
+    this.router.navigate(['/']);
   }
 
   signUp() {

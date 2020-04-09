@@ -83,7 +83,7 @@
     <div class="widget">
       <div class="widget__post-info">
         <div class="widget__post-info__btns">
-          <button type="button" class="btn btn-dark"
+          <button *ngIf="admin" type="button" class="btn btn-dark"
                   onclick="document.getElementById('id01').style.display='block'">ADD ANIME</button>
         </div>
       </div>
@@ -118,21 +118,21 @@
     </div>
 
     <div class="container">
-      <label class="label-h" for="name">Name:<input #Name type="text" placeholder="Enter name" name="name" required /></label>
-      <label class="label-h" for="alterName">AlterName:<input #AlterName type="text" placeholder="Enter alterName" name="altername" required /></label>
-      <label class="label-h" for="catalogType">CatalogType:<input #CatalogType type="text" placeholder="Enter catalogType" name="catalogType" required /></label>
-      <label class="label-h" for="price">Price:<input #Price type="number" placeholder="Enter Price" name="price" required /></label>
-      <label class="label-h" for="rating">Rating:<input #Rating type="number" placeholder="Enter Rating" name="rating" required /></label>
-      <label class="label-h" for="viewCount">ViewCount:<input #ViewCount type="number" placeholder="Enter ViewCount" name="viewCount" required /></label>
-      <label class="label-h" for="releaseDate">ReleaseDate:<input #ReleaseDate type="number" placeholder="Enter ReleaseDate" name="releaseDate" required /></label>
-      <label class="label-h" for="image1">Image1:<input #Image1 type="text" placeholder="Enter Image1" name="image1" required /></label>
-      <label class="label-h" for="ageLimit">AgeLimit:<input #AgeLimit type="number" placeholder="Enter AgeLimit" name="ageLimit" required /></label>
-      <label class="label-h" for="screen_1_1">Screen_1_1:<input #Screen_1_1 type="text" placeholder="Enter Screen_1_1" name="screen_1_1" required /></label>
-      <label class="label-h" for="screen_1_2">Screen_1_2:<input #Screen_1_2 type="text" placeholder="Enter Screen_1_2" name="screen_1_2" required /></label>
-      <label class="label-h" for="screen_1_3">Screen_1_3:<input #Screen_1_3 type="text" placeholder="Enter Screen_1_3" name="screen_1_3" required /></label>
-      <label class="label-h" for="screen_1_4">Screen_1_4:<input #Screen_1_4 type="text" placeholder="Enter Screen_1_4" name="screen_1_4" required /></label>
-      <label class="label-h" for="screen_1_5">Screen_1_5:<input #Screen_1_5 type="text" placeholder="Enter Screen_1_5" name="screen_1_5" required /></label>
-      <label class="label-h" for="description">Description:<input #Description type="text" placeholder="Enter Description" name="description" required /></label>
+      <form [formGroup]="form">
+      <label class="label-h" for="name">Name:<input formControlName="name" #Name type="text" placeholder="Enter name" name="name" required /></label>
+      <label class="label-h" for="alterName">AlterName:<input formControlName="alterName" #AlterName type="text" placeholder="Enter alterName" name="alterName" required /></label>
+      <label class="label-h" for="catalogType">CatalogType:<input formControlName="catalogType" #CatalogType type="text" placeholder="Enter catalogType" name="catalogType" required /></label>
+      <label class="label-h" for="rating">Rating:<input formControlName="rating" #Rating type="number" placeholder="Enter Rating" name="rating" required /></label>
+      <label class="label-h" for="viewCount">ViewCount:<input formControlName="viewCount" #ViewCount type="number" placeholder="Enter ViewCount" name="viewCount" required /></label>
+      <label class="label-h" for="releaseDate">ReleaseDate:<input formControlName="releaseDate" #ReleaseDate type="number" placeholder="Enter ReleaseDate" name="releaseDate" required /></label>
+      <label class="label-h" for="image1">Image1:<input formControlName="image1" #Image1 type="text" placeholder="Enter Image1" name="image1" required /></label>
+      <label class="label-h" for="ageLimit">AgeLimit:<input formControlName="ageLimit" #AgeLimit type="number" placeholder="Enter AgeLimit" name="ageLimit" required /></label>
+      <label class="label-h" for="screen_1_1">Screen_1_1:<input formControlName="screen_1_1" #Screen_1_1 type="text" placeholder="Enter Screen_1_1" name="screen_1_1" required /></label>
+      <label class="label-h" for="screen_1_2">Screen_1_2:<input formControlName="screen_1_2" #Screen_1_2 type="text" placeholder="Enter Screen_1_2" name="screen_1_2" required /></label>
+      <label class="label-h" for="screen_1_3">Screen_1_3:<input formControlName="screen_1_3" #Screen_1_3 type="text" placeholder="Enter Screen_1_3" name="screen_1_3" required /></label>
+      <label class="label-h" for="screen_1_4">Screen_1_4:<input formControlName="screen_1_4" #Screen_1_4 type="text" placeholder="Enter Screen_1_4" name="screen_1_4" required /></label>
+      <label class="label-h" for="screen_1_5">Screen_1_5:<input formControlName="screen_1_5" #Screen_1_5 type="text" placeholder="Enter Screen_1_5" name="screen_1_5" required /></label>
+      <label class="label-h" for="description">Description:<input formControlName="description" #Description type="text" placeholder="Enter Description" name="description" required /></label>
 
       <!-- (click) passes input value to add() and then clears the input -->
   <!--    <button class="btn btn-green button2"
@@ -142,9 +142,12 @@
                            description.value); productName.value=''">
         ADD NEW MOVIE
       </button> -->
+
+      </form>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
+      <button class="btn btn-green button2" (click)="createAnime()">Add</button>
       <button type="button" onclick="document.getElementById('id01').style.display='none'"
               class="cancelbtn btn btn-red button2">Cancel</button>
     </div>

@@ -56,7 +56,11 @@ export class ProductService {
   }
 
   getComments(id: number): Observable<Comment[]> {
-    return of(COMMENTS.filter(comment => comment.id_movie === id));
+    return of(COMMENTS.filter(comment => comment.movieID === id));
+  }
+
+  changeViewCount(id: number) {
+    return of(MOVIES.find(movie => movie.id === id));
   }
 }
 
