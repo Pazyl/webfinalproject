@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Product } from '../product';
+import { Movie } from '../movie';
+import { Comment} from '../comment';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -12,7 +13,9 @@ import { ProductService } from '../product.service';
   styleUrls: ['./anime-detail.component.css']
 })
 export class AnimeDetailComponent implements OnInit {
-  product: Product;
+  @Input() AMS: Movie;
+  popularAnimes: Movie[];
+  comments: Comment[];
 
   constructor(
     private route: ActivatedRoute,
@@ -21,17 +24,36 @@ export class AnimeDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getProduct();
+    this.getAnimeOrMovieOrSerial();
+    this.getMostPopularAnimes();
+    this.getComments();
   }
 
-  getProduct(): void {
+  getAnimeOrMovieOrSerial(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.productService.getProduct(id)
-      .subscribe(product => this.product = product);
+    const api = this.route.snapshot.paramMap.get('api');
+    this.productService.getAnimeOrMovieOrSerial(api, id)
+      .subscribe(ams => this.AMS = ams);
+  }
+
+  getMostPopularAnimes(): void {
+    this.productService.getMostPopularAnimes()
+      .subscribe(popularAnimes => this.popularAnimes = popularAnimes);
+  }
+
+  getComments(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.productService.getComments(id)
+      .subscribe(comments => this.comments = comments);
   }
 
   goBack(): void {
     this.location.back();
   }
+
+  /*save(): void {
+    this.productService.updateProduct(this.product)
+      .subscribe(() => this.goBack() );
+  }*/
 
 }

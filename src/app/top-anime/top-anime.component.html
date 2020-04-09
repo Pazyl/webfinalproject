@@ -1,5 +1,5 @@
 
-<!-- TOP 100 ANIME -->
+<!-- TOP 100 -->
 
 <!-- Content container-->
 <div class="content-container">
@@ -9,18 +9,22 @@
     <div class="media">
       <!-- Media post-->
       <article class="media__post">
-        <div class="media__post__header"><h1 class="media__post__title">ТОП 100 АНИМЕ</h1></div>
-
+        <div class="media__post__header"><h1 class="media__post__title">ТОП 100</h1></div>
         <!-- TOP 100 -->
         <div class="finished-releases__list">
-          <div class="ads-list__item" *ngFor="let product of products">
-            <div class="ads-list__item__thumb"><img src="{{product.image1}}" style="width: 280px"></div>
-
-            <nav><h3 class="h3 ads-list__item__title"><a routerLink="/anime/{{product.id}}"
-                                                         title="{{product.name}}" class="h3 ads-list__item__title">{{product.name}}</a></h3></nav>
+          <div class="ads-list__item" *ngFor="let top1 of top100; let i = index">
+            <div class="ads-list__item__thumb"><img src="{{top1.image1}}" style="width: 280px"></div>
+            <nav>
+              <h3 class="h3 ads-list__item__title">
+                <a routerLink="/{{top1.catalogType}}/{{top1.id}}" title="{{top1.name}}" class="h3 ads-list__item__title">
+                  <span class="span-h3">#{{i+1}}</span> {{top1.name}}
+                </a>
+              </h3>
+            </nav>
           </div>
         </div>
         <!-- TOP 100 End-->
+
         <div class="finished-releases__list">
           <p class="info info-p">
             Если вы поклонник аниме или только недавно начали интересоваться этим видом искусства, наш сайт предлагает
@@ -41,9 +45,11 @@
             Надеемся, что список лучших аниме всех жанров поможет вам определиться с выбором.
           </p>
         </div>
+
         <div class="finished-releases__list">
-          <div class="info-h1"><h1>ТОП 100 АНИМЕ</h1></div>
+          <div class="info-h1"><h1>Лучшие аниме</h1></div>
         </div>
+
         <div class="finished-releases__list">
           <p class="info info-p">
             Самыми популярными аниме мы считаем не те, которым присвоили высокие рейтинги официальные источники
@@ -70,24 +76,23 @@
 
   <!-- Right sidebar-->
   <div class="right-sidebar">
-    <!-- Post info widget-->
+    <!-- Most popular widget-->
     <div class="widget">
-      <div class="widget__post-info">
-        <div class="widget__post-info__poster">
-
-        </div>
-
-        <div class="widget__post-info__rating">
-
-        </div>
-
-        <div class="widget__post-info__btns">
-          <button type="button" class="btn btn-dark">СМОТРЕТЬ ТРЕЙЛЕР</button>
-          <button type="button" class="btn btn-red">МНЕ НРАВИТСЯ!</button>
-          <button type="button" class="btn btn-green">В ЗАКЛАДКИ</button>
+      <div class="info-r"><h1>Самое популярное</h1></div>
+      <div class="widget__most-popular">
+        <!-- Most popular widget item-->
+        <div class="widget__most-popular__item widget__item" *ngFor="let top1 of top100.slice(0, 10)">
+          <div class="widget__most-popular__item__info">
+            <a routerLink="/{{top1.catalogType}}/{{top1.id}}" title="{{top1.name}}" class="h4 widget__most-popular__item__title">{{top1.name}}</a>
+            <div class="genre-tags">
+              <a href="" title="Драма">Драма</a>
+              <a href="" title="Повседневность">Повседневность</a>
+              <a href="" title="Романтик">Романтик</a>
+            </div>
+          </div>
+          <div class="widget__most-popular__item__rating">{{top1.rating}}</div>
         </div>
       </div>
     </div>
-    <!-- Post info widget End-->
   </div>
 </div>

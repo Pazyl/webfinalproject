@@ -1,0 +1,17 @@
+<div class="box">
+  <form [formGroup]="form">
+      <label class="label" for="username">Username:</label>
+      <input class="input" type="text" id="username" name="username" formControlName="username">
+
+      <label class="label" for="password">Password:</label>
+      <input class="input" type="password" id="password" name="password" formControlName="password">
+
+      <label class="label" for="password-confirm">Confirm Password:</label>
+      <input class="input" type="password" id="password-confirm" name="password2" formControlName="password2">
+      <small class="small" *ngIf="statusLogin">Your login yet there</small>
+      <small class="small" *ngIf="statusEmpty">Your login empty</small>
+      <small class="small" *ngIf="status">Your pass1 and pass2 not equal</small>
+
+      <button class="button" type="submit" (click)="createUser()">Sign Up</button>
+  </form>
+</div>

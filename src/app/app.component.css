@@ -14,18 +14,20 @@ body {
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  border: 0px;
+  border: 0;
   z-index: 1;
 }
 
 .navs {
-  width: 748px;
+  width: 500px;
   height: auto;
-  margin: auto;
+  margin-left: 308px;
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
 a {
-  padding: 0px 38px 0px 38px;
+  padding: 0 38px 0 38px;
   font-family: 'bebasNeue', sans-serif;
   font-size: 16px;
   color: #AEADAD;
@@ -41,7 +43,7 @@ a:hover {
 .content {
   width: 100%;
   min-width: 300px;
-  max-width: 1260px;
+  max-width: 1240px;
   padding: 0 10px;
   margin-left: auto;
   margin-right: auto;
@@ -57,7 +59,6 @@ a:hover {
 }
 
 .main-navigation__item {
-  display: block;
   font-size: 20px;
   font-family: 'bebasNeue', sans-serif;
   font-weight: bold;
@@ -70,7 +71,7 @@ a:hover {
 }
 
 .active-select {
-  margin: -8px 0px 0px;
+  margin: -8px 0 0;
   padding: 20px 30px 16px;
   color: #FFF;
   border: 5px solid #E70C2F;
@@ -213,7 +214,7 @@ a:hover {
 
 .copyright__left-col {
   float: left;
-  margin: 0px 0px 15px;
+  margin: 0 0 15px;
   font-size: 0.928571429em;
   line-height: 2.153846154em;
   color: #999;
@@ -245,7 +246,6 @@ a:hover {
   font-size: 36px;
   font-family: 'bebasNeue', sans-serif;
   font-weight: 700;
-  line-height: 64px;
   text-transform: uppercase;
   line-height: 1;
 }
@@ -298,4 +298,20 @@ h3 a:hover {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.sing {
+  margin-right: 38px;
+  font-family: 'bebasNeue', sans-serif;
+  font-size: 16px;
+  color: #292929;
+  text-align: center;
+  background-color: transparent;
+  border: 1.5px solid #292929;
+  border-radius: 5px;
+}
+
+.sing:hover {
+  border-color: #E70C2F;
+  color: #E70C2F;
 }

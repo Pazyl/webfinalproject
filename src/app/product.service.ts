@@ -2,52 +2,71 @@ import { Injectable } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
 
-import { Product } from './product';
-import { Category } from './category';
+import { Movie } from './movie';
+import { Catalog } from './catalog';
+import { Comment } from './comment';
 
-import { PRODUCTS } from './mock-products';
-import { CATEGORIES } from './mock-categories';
-
-import { MessageService } from './message.service';
+import { MOVIES } from './mock-movies';
+import { CATALOGS } from './mock-catalogs';
+import { COMMENTS } from './mock-comments';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
 
-  constructor(private messageService: MessageService) { }
+  constructor() { }
 
-  getProducts(): Observable<Product[]> {
-    return of(PRODUCTS);
+  getAnimes(): Observable<Movie[]> {
+    return of(MOVIES.filter(anime => anime.catalogType === 'anime'));
+  }
+  getMovies(): Observable<Movie[]> {
+    return of(MOVIES.filter(movie => movie.catalogType === 'movies'));
+  }
+  getSerials(): Observable<Movie[]> {
+    return of(MOVIES.filter(serial => serial.catalogType === 'serials'));
   }
 
-  getTop100(): Observable<Product[]> {
-    return of(PRODUCTS);
+  getTop100(): Observable<Movie[]> {
+    return of(MOVIES.sort(sortByRating).reverse());
   }
 
-  getProductsByType(id: number): Observable<Product[]> {
-    // TODO: send the message _after_ fetching the heroes
-    this.messageService.add(`ProductService: fetched products by type=${id}`);
-    return of(PRODUCTS.filter(product => product.categoryType === id));
+  getMostPopularAnimes(): Observable<Movie[]> {
+    return of(MOVIES.filter(popularAnimes => popularAnimes.catalogType === 'anime').sort(sortByRating).reverse().slice(0, 10));
+  }
+  getMostPopularMovies(): Observable<Movie[]> {
+    return of(MOVIES.filter(popularAnimes => popularAnimes.catalogType === 'movies').sort(sortByRating).reverse().slice(0, 10));
+  }
+  getMostPopularSerials(): Observable<Movie[]> {
+    return of(MOVIES.filter(popularAnimes => popularAnimes.catalogType === 'serials').sort(sortByRating).reverse().slice(0, 10));
   }
 
-  getAnimeByStatus(): Observable<Product[]> {
-    return of(PRODUCTS.filter(product => product.status === 'Завершен'));
+  getFinishedReleases(): Observable<Movie[]> {
+    return of(MOVIES.filter(finishedReleases => finishedReleases.status === 'Завершен').sort(sortByViewCount).reverse());
   }
 
-  getProduct(id: number): Observable<Product> {
-    // TODO: send the message _after_ fetching the hero
-    this.messageService.add(`ProductService: fetched product id=${id}`);
-    return of(PRODUCTS.find(product => product.id === id));
+  getAnimeOrMovieOrSerial(api: string, id: number): Observable<Movie> {
+      return of(MOVIES.find(anime => anime.id === id && anime.catalogType === api));
   }
 
-  getCategories(): Observable<Category[]> {
-    // TODO: send the message _after_ fetching the Categories
-    this.messageService.add('ProductService: fetched Categories');
-    return of(CATEGORIES);
+  getCatalogs(): Observable<Catalog[]> {
+    return of(CATALOGS);
   }
 
-  getCategory(id: number): Observable<Category> {
-    // TODO: send the message _after_ fetching the Category
-    this.messageService.add(`ProductService: fetched Category id=${id}`);
-    return of(CATEGORIES.find(category => category.id === id));
+  getCatalog(id: number): Observable<Catalog> {
+    return of(CATALOGS.find(catalog => catalog.id === id));
   }
+
+  getComments(id: number): Observable<Comment[]> {
+    return of(COMMENTS.filter(comment => comment.id_movie === id));
+  }
+}
+
+
+// FUNCTION//
+
+function sortByRating(a, b) {
+  return (a.rating - b.rating);
+}
+
+function sortByViewCount(a, b) {
+  return (a.viewCount - b.viewCount);
 }

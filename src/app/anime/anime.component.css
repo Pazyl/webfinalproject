@@ -1,0 +1,526 @@
+.content-container {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+}
+
+.content2 {
+  width: 860px;
+  float: left;
+  height: 100%;
+  padding: 17.6px 20px 0 30px;
+  background-color: white;
+}
+
+.media {
+  padding-top: 20.012px;
+  color: #797979;
+}
+
+.media__post {
+  margin-bottom: 14.238px;
+}
+
+article {
+  display: block;
+}
+
+.media__post__header {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.media__post__title {
+  width: 799.8px;
+}
+
+h1 {
+  margin: 0;
+  color: #292929;
+  font-size: 36px;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.media__post__original-title {
+  font-size: 17px;
+}
+
+.pegi {
+  height: 60px;
+  width: 85px;
+  font-family: 'leagueGothic', sans-serif;
+  margin: auto;
+  padding: 0;
+  font-size: 3em;
+  color: #F7F7F7;
+  background: #E70C2F;
+}
+
+.media__post__pegi {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+.media__panel {
+  padding: 20px;
+  margin-left: -20px;
+  margin-right: -10px;
+}
+
+.media__panel__gray {
+  background: #FAFAFA;
+}
+
+p {
+  margin: 0 0 15px;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.media__post__info {
+  display: flex;
+}
+
+.col-1 {
+  width: 425px;
+}
+
+.right-sidebar {
+  width: 310px;
+  margin: 0;
+  padding: 27px 10px 20px 10px;
+  background: #f5f5f5f5;
+  display: block;
+}
+
+.widget__post-info {
+  padding: 3px 15px 35px 15px;
+}
+
+.widget__post-info__poster {
+  margin-bottom: 15px;
+}
+
+.widget__post-info__btns {
+  padding-left: 30px;
+  margin-bottom: 35px;
+}
+
+.btn {
+  width: 100%;
+  height: 44px;
+  max-width: 222px;
+  display: block;
+  color: #FAFAFA;
+  cursor: pointer;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 7px;
+  border: 1px solid transparent;
+  font-weight: bold;
+}
+
+.btn:hover {
+  color: #FAFAFA;
+  border-color: #E70C2F;
+  background-color: #E70C2F;
+}
+
+.btn-dark {
+  border-color: #292929;
+  background-color: #292929;
+}
+
+.btn-red {
+  border-color: #E70C2F;
+  background-color: #E70C2F;
+}
+.btn-green {
+  border-color: #69A935;
+  background-color: #69A935;
+}
+
+.widget__post-info__voicers {
+  margin-bottom: 15px;
+}
+.h3 {
+  color: #292929;
+  margin: 0;
+  font-family: 'leagueGothic', sans-serif;
+  line-height: 1;
+  font-weight: normal;
+}
+
+.span-h3 {
+  color: #E70C2F;
+  margin: 0;
+  font-family: 'leagueGothic', sans-serif;
+  line-height: 1;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.widget__post-info__voicers__title {
+  margin-bottom: 12px;
+}
+
+.date-color {
+  color: #292929;
+}
+
+.date-a {
+  text-decoration: none;
+  color: #E70C2F;
+}
+
+.date-a:hover {
+  text-decoration: underline;
+}
+.date-a:focus {
+  text-decoration: underline;
+}
+
+.media__sshots {
+  margin-bottom: 30px;
+}
+
+.media__sshots__title {
+  padding-bottom: 25px;
+  font-weight: bold;
+}
+
+.media__sshots__list {
+  width: 873.975px;
+  height: 91.987px;
+  padding: 0;
+  margin: 0 -6.987px;
+}
+
+.media__sshots__list__item {
+  position: relative;
+  display: block;
+  float: left;
+  width: 160.813px;
+  height: 0;
+  padding: 5px 6.987px 0;
+}
+
+.loaded {
+  width: 160.813px;
+}
+
+.finished-releases__list {
+  margin: 0 -13.400px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.ads-list__item {
+  width: 281.6px;
+  padding: 0 7px;
+  margin: 15.075px 0;
+}
+
+.ads-list__item__thumb {
+  display: block;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.ads-list__item__title {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 7px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+nav h3 a {
+  margin: 0;
+  color: #292929;
+  font-family: 'bebasNeue', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav h3 a:hover {
+  color: #E70C2F;
+}
+
+.info {
+  width: 869.8px;
+  margin: 0 7px;
+}
+
+.info-p {
+  margin: 0 0 15px;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.info-h1 {
+  width: 869.8px;
+  margin: 0 7px;
+  padding-bottom: 5px;
+}
+
+.info-h1 h1 {
+  margin: 0;
+  color: #292929;
+  font-size: 1.5em;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.info-r {
+  margin-bottom: 15px;
+}
+
+.info-r h1 {
+  margin: 0;
+  color: #292929;
+  font-size: 1.5em;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.widget__most-popular {
+  width: 310px;
+  margin: 0 -10px;
+}
+
+.widget__most-popular .widget__item {
+  padding-top: 14.488px;
+  padding-bottom: 14.488px;
+}
+
+.widget__most-popular__item:nth-child(odd) {
+  background-color: #EDEDED;
+}
+
+.widget__most-popular__item {
+  display: table;
+  width: 100%;
+}
+.widget__item {
+  padding: 10px;
+}
+
+.widget__most-popular__item__info {
+  padding-right: 18.725px;
+}
+
+.widget__most-popular__item__info, .widget__most-popular__item__rating {
+  display: table-cell;
+}
+
+.widget .h4 {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.widget__most-popular__item__title {
+  margin-bottom: 3px;
+  line-height: 0.916666667em;
+}
+
+.h4 {
+  margin: 0;
+  color: #292929;
+  font-size: 16px;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.h4:hover {
+  color: #E70C2F;
+}
+
+.widget__most-popular__item__rating {
+  font-family: 'leagueGothic', sans-serif;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 36px;
+  color: #E70C2F;
+  vertical-align: middle;
+  text-align: right;
+  display: table-cell;
+}
+
+.widget__most-popular__item .genre-tags {
+  width: 230px;
+  font-size: 0.857142857em;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 1px;
+  text-overflow: ellipsis;
+  letter-spacing: -0.001em;
+  color: #AFAEAE;
+}
+
+.genre-tags a {
+  font-family: 'bebasNeue', sans-serif;
+  position: relative;
+  margin-right: 7px;
+  color: #FF0000;
+  text-decoration: none;
+}
+
+.genre-tags a:hover {
+  text-decoration: underline;
+}
+
+.genre-tags a:after {
+  content: ', ';
+  right: -2px;
+}
+
+.genre-tags a:last-child:after{
+  content: '';
+}
+
+.btn-x {
+  width: 100%;
+  color: #FAFAFA;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid transparent;
+  font-weight: bold;
+}
+
+.btn-x:hover {
+  color: #FAFAFA;
+  border-color: #E70C2F;
+  background-color: #E70C2F;
+}
+
+.btn-dark {
+  border-color: #292929;
+  background-color: #292929;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color: #E70C2F;
+  font-size: 16px;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.label-h {
+  margin: 0;
+  color: #292929;
+  font-size: 16px;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  text-decoration: none;
+}
+

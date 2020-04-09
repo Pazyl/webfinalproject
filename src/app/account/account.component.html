@@ -1,0 +1,103 @@
+
+<!-- Anime detail -->
+
+<!-- Content container-->
+<div class="content-container"> <!--*ngIf=""-->
+  <!-- Content. Left block -->
+  <div class="content2">
+    <!-- Media-->
+    <div class="media">
+      <!-- Media post -->
+      <article class="media__post">
+        <div class="media__post__header">
+          <h1 class="media__post__title">{{user.username}}</h1>
+          <div class="media__post__original-title">{{user.firstname + " " + user.lastname}}</div>
+        </div>
+
+        <div class="media__panel media__panel__gray">
+
+          <div class="media__post__info">
+            <div class="col-1">
+              <div class="releases-date">
+                <p>First Name: <span class="date-color">{{user.firstname}}</span></p>
+              </div>
+
+              <div class="status">
+                <p>Last Name: <span class="date-color">{{user.lastname}}</span></p>
+              </div>
+
+              <div class="rating">
+                <p>Email: <span class="date-color"></span></p>
+              </div>
+            </div>
+
+            <div class="col-1">
+              <div class="rating">
+                <p>Gender: <span class="date-color"></span></p>
+              </div>
+
+              <div class="viewCount">
+                <p>Hometown: <span class="date-color"></span></p>
+              </div>
+
+              <div class="viewCount">
+                <p>Birthday: <span class="date-color"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!--Media post End-->
+    </div>
+  </div>
+  <!-- Content. Left block End-->
+
+
+  <!-- Right sidebar-->
+  <div class="right-sidebar">
+    <!-- Post info widget-->
+    <div class="widget">
+      <div class="widget__post-info">
+        <div class="widget__post-info__poster">
+          <img src="" width="280">
+        </div>
+
+        <div class="widget__post-info__btns">
+          <button type="button" class="btn btn-red">МНЕ НРАВИТСЯ!</button>
+          <button type="button" class="btn btn-green">В ЗАКЛАДКИ</button>
+
+          <button type="button" class="btn btn-dark" onclick="document.getElementById('id01').style.display='block'">Change Name</button>
+        </div>
+      </div>
+    </div>
+    <!-- Post info widget End -->
+  </div>
+</div>
+
+
+
+<!-- Change Name -->
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="" method="patch">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <!--
+    <div class="container">
+      <label class="label-h" for="newName">Name:
+        <input type="text" [(ngModel)]="" placeholder="name" name="newName" required/>
+      </label>
+      <label class="label-h" for="newRating">Rating:
+        <input type="number" [(ngModel)]="" placeholder="rating" name="newRating" required/>
+      </label>
+    </div>
+    -->
+
+    <div class="container" style="background-color:#f1f1f1">
+      <!-- <button (click)="save()" type="button" class="btn btn-green button2">SAVE</button> -->
+    </div>
+
+  </form>
+
+</div>

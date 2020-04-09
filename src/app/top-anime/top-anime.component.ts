@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Product } from 'src/app/product';
+import { Movie } from 'src/app/movie';
 import { ProductService } from 'src/app/product.service';
-import { MessageService } from 'src/app/message.service';
+import { Catalog } from 'src/app/catalog';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-top-anime',
@@ -10,9 +11,9 @@ import { MessageService } from 'src/app/message.service';
   styleUrls: ['./top-anime.component.css']
 })
 export class TopAnimeComponent implements OnInit {
-  products: Product[];
+  top100: Movie[];
 
-  constructor(private productService: ProductService, private messageService: MessageService) { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
     this.getTop100();
@@ -20,6 +21,6 @@ export class TopAnimeComponent implements OnInit {
 
   getTop100(): void {
     this.productService.getTop100()
-      .subscribe(products => this.products = products.slice(0, 6));
+      .subscribe(top1 => this.top100 = top1);
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Product } from '../product';
+import { Product } from '../movie';
 
 @Component({
   selector: 'app-view-description',

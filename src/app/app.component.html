@@ -6,6 +6,11 @@
     <a routerLink="/news" title="Новости">Новости</a>
     <a routerLink="/project-team" title="Команда проекта">Команда</a>
   </nav>
+
+  <a routerLink="/account" *ngIf="valueOut">Account</a>
+  <button class="sing" *ngIf="valueIn" (click)="signIn()">Sign in</button>
+  <button class="sing" *ngIf="valueUp" (click)="signUp()">Sign up</button>
+  <button class="sing" *ngIf="valueOut" (click)="signOut()">Sign out</button>
 </div>
 
 <!-- FON - BOX -->
@@ -26,16 +31,13 @@
     <nav class="main-navigation">
       <a routerLink="/home" class="main-navigation__item">Главная</a>
       <a routerLink="/top-100-anime" class="main-navigation__item">ТОП 100</a>
-      <a routerLink="/anime" class="main-navigation__item">Аниме</a>
-      <a routerLink="/movies" class="main-navigation__item">Фильмы</a>
-      <a routerLink="/series" class="main-navigation__item">Сериалы</a>
+      <a routerLink="/{{catalog.api}}" class="main-navigation__item" *ngFor="let catalog of catalogs">{{catalog.catalogName}}</a>
       <a routerLink="/catalog" class="main-navigation__item active-select">Каталог</a>
     </nav>
     <!-- Main navigation End-->
 
     <!-- Content container-->
     <router-outlet></router-outlet>
-
   </div>
 </div>
 <!-- Main container End-->
@@ -51,11 +53,13 @@
       <!-- Finished releases header End-->
       <!-- Finished releases list-->
       <div class="finished-releases__list">
-        <div class="ads-list__item" *ngFor="let product of products">
-          <div class="ads-list__item__thumb"><img src="{{product.image1}}" style="width: 281.6px"></div>
-
-          <nav><h3 class="h3 ads-list__item__title"><a routerLink="/anime/{{product.id}}"
-                                                       title="{{product.name}}" class="h3 ads-list__item__title">{{product.name}}</a></h3></nav>
+        <div class="ads-list__item" *ngFor="let fr of finishedReleases">
+          <div class="ads-list__item__thumb"><img src="{{fr.image1}}" style="width: 281.6px"></div>
+          <nav>
+            <h3 class="h3 ads-list__item__title">
+              <a routerLink="/{{fr.catalogType}}/{{fr.id}}" title="{{fr.name}}">{{fr.name}}</a>
+            </h3>
+          </nav>
         </div>
       </div>
     </div>
@@ -69,13 +73,13 @@
     <div class="main-footer__wrapper">
       <div class="main-footer__news-subscribe main-footer__item">
         <div class="h4 main-footer__item__title">Аниме</div>
-        <p class="p">Хочешь быть всегда в теме происходящего аниме мира? Хочешь знать о выходе новых аниме? Тогда заходи на наш аниме сайт почаще!  У нас всё самое новое из мира аниме!</p>
+        <p class="p">
+          Хочешь быть всегда в теме происходящего аниме мира? Хочешь знать о выходе новых аниме? Тогда заходи на наш
+          аниме сайт почаще!  У нас всё самое новое из мира аниме!
+        </p>
       </div>
-      <div>
-        <img class="stay-home" src="assets/images/stay-home-logo.png">
-      </div>
+      <div><img class="stay-home" src="assets/images/stay-home-logo.png"></div>
     </div>
-
   </div>
 </footer>
 <!-- Footer End-->

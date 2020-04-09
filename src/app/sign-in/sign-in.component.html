@@ -1,0 +1,16 @@
+<div class="box">
+  <div>
+    <h3>Вход на сайт</h3>
+  </div>
+  <div>
+    <form [formGroup]="form">
+      <label class="label" for="username">Username:</label>
+      <input class="input" type="text" id="username" name="username" formControlName="username">
+
+      <label class="label" for="password">Password:</label>
+      <input class="input" type="password" id="password" name="password" formControlName="password">
+      <small *ngIf="status" class="small">You password or login is not correct</small>
+      <button class="button" (click)="login()">Sing In</button>
+    </form>
+  </div>
+</div>

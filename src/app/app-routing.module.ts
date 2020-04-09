@@ -6,8 +6,9 @@ import { TopAnimeComponent } from './top-anime/top-anime.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { AnimeComponent } from './anime/anime.component';
 import { MoviesComponent } from './movies/movies.component';
-import { SeriesComponent } from './series/series.component';
+import { SerialsComponent } from './serials/serials.component';
 import { AnimeDetailComponent } from './anime-detail/anime-detail.component';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -16,8 +17,9 @@ const routes: Routes = [
   { path: 'catalog', component: CatalogComponent },
   { path: 'anime', component: AnimeComponent },
   { path: 'movies', component: MoviesComponent },
-  { path: 'series', component: SeriesComponent },
-  { path: 'anime/:id', component: AnimeDetailComponent },
+  { path: 'serials', component: SerialsComponent },
+  { path: ':api/:id', component: AnimeDetailComponent },
+  { path: 'account', component: AccountComponent }
 ];
 
 @NgModule({

@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Product } from '../product';
-import { Category } from '../category';
+import { Product } from '../movie';
+import { Category } from '../catalog';
 import { ProductService } from '../product.service';
 
 @Component({

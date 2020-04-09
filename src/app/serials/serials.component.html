@@ -1,0 +1,95 @@
+
+<!-- MOVIES -->
+
+<!-- Content container-->
+<div class="content-container">
+  <!-- Content. Left block-->
+  <div class="content2">
+    <!-- Media-->
+    <div class="media">
+      <!-- Media post-->
+      <article class="media__post">
+        <div class="media__post__header"><h1 class="media__post__title">ФИЛЬМЫ</h1></div>
+
+        <!-- VIEW Serials -->
+        <div class="finished-releases__list">
+          <div class="ads-list__item" *ngFor="let serial of serials">
+            <div class="ads-list__item__thumb"><img src="{{serial.image1}}" style="width: 280px"></div>
+
+            <nav>
+              <h3 class="h3 ads-list__item__title"><a routerLink="/{{serial.catalogType}}/{{serial.id}}" title="{{serial.name}}" class="h3 ads-list__item__title">{{serial.name}}</a></h3>
+            </nav>
+          </div>
+        </div>
+        <!-- VIEW Serials End-->
+        <div class="finished-releases__list">
+          <p class="info info-p">
+            Если вы поклонник аниме или только недавно начали интересоваться этим видом искусства, наш сайт предлагает
+            посмотреть ТОП-100 лучших аниме. Мы не делим их по жанрам и стилям, на этой странице представлены только
+            сериалы, которые выше всего оценили сами зрители. Вы можете познакомиться с их описанием, оценить скриншоты
+            и трейлеры, а затем посмотреть их онлайн, бесплатно и в хорошем качестве.
+          </p>
+          <p class="info info-p">
+            Мы надеемся, что в представленном списке каждый сможет найти именно те сериалы, благодаря которым многие
+            зрители так увлечены новым для нашей страны видом искусства.
+          </p>
+          <p class="info info-p">
+            А если вы захотите посмотреть больше и заинтересуетесь каким-то определенным жанром - к вашим услугам
+            удобная навигация по каталогу и самый большой выбор произведений всех стилей, от фэнтези и научной фантастики
+            до любовных и психологических драм, хоррора или комедий.
+          </p>
+          <p class="info info-p">
+            Надеемся, что список лучших аниме всех жанров поможет вам определиться с выбором.
+          </p>
+        </div>
+
+        <div class="finished-releases__list">
+          <div class="info-h1"><h1>Лучшие аниме</h1></div>
+        </div>
+
+        <div class="finished-releases__list">
+          <p class="info info-p">
+            Самыми популярными аниме мы считаем не те, которым присвоили высокие рейтинги официальные источники
+            (какими бы авторитетными они ни были). На этой странице представлены сериалы, манга и дорамы, которым
+            поставили самые высокие оценки наши зрители, посетители сайта.
+          </p>
+          <p class="info info-p">
+            Особенностью аниме, этих рисованных фильмов, предназначенных для аудитории различного возраста, является
+            высокая реалистичность, непредсказуемые сюжеты и необычные персонажи. Но чтобы определиться, какой жанр
+            подойдет вам больше всего, мы рекомендуем выборку лучших произведений всех жанров. Приключения, детектив,
+            фантастика, исторические и романтические истории - как же найти лучшее среди бесконечного множества?
+          </p>
+          <p class="info info-p">
+            Мы считаем, что количество просмотров, оставленных комментариев и обсуждений говорит о качестве произведения
+            намного больше, чем оценка критиков.
+          </p>
+          <p class="info info-p">Наш сайт предлагает самый удобный каталог аниме, в котором легко найти любимый жанр или сериал по названию.</p>
+        </div>
+      </article>
+      <!--Media post End-->
+    </div>
+  </div>
+  <!-- Content. Left block End-->
+
+  <!-- Right sidebar-->
+  <div class="right-sidebar">
+    <!-- Most popular widget-->
+    <div class="widget">
+      <div class="info-r"><h1>Самое популярное</h1></div>
+      <div class="widget__most-popular">
+        <!-- Most popular widget item-->
+        <div class="widget__most-popular__item widget__item" *ngFor="let pSerial of popularSerials">
+          <div class="widget__most-popular__item__info">
+            <a routerLink="/{{pSerial.catalogType}}/{{pSerial.id}}" title="{{pSerial.name}}" class="h4 widget__most-popular__item__title">{{pSerial.name}}</a>
+            <div class="genre-tags">
+              <a href="" title="Драма">Драма</a>
+              <a href="" title="Повседневность">Повседневность</a>
+              <a href="" title="Романтик">Романтик</a>
+            </div>
+          </div>
+          <div class="widget__most-popular__item__rating">{{pSerial.rating}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

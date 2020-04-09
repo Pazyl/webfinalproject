@@ -1,8 +1,8 @@
 
-<!-- Anime detail -->
+<!-- MOVIE DETAIL -->
 
 <!-- Content container-->
-<div class="content-container" *ngIf="product">
+<div class="content-container" *ngIf="AMS">
   <!-- Content. Left block-->
   <div class="content2">
     <!-- Media-->
@@ -10,36 +10,40 @@
       <!-- Media post-->
       <article class="media__post">
         <div class="media__post__header">
-          <h1 class="media__post__title">{{product.name}}</h1>
-          <div class="media__post__original-title">{{product.alterName}}</div>
+          <h1 class="media__post__title">{{AMS.name}}</h1>
+          <div class="media__post__original-title">{{AMS.alterName}}</div>
         </div>
 
         <div class="media__panel media__panel__gray">
-          <div class="media__post__body">
-            <p>{{product.description}}</p><br>
-          </div>
+          <div class="media__post__body"><p>{{AMS.description}}</p><br></div>
 
           <div class="media__post__info">
             <div class="col-1">
               <div class="releases-date">
-                <p>Дата выпуска: <span class="date-color">с <a class="date-a" href="/catalog/releaseDate/{{product.releaseDate}}" title="Аниме онлайн {{product.releaseDate}} года">{{product.releaseDate}}</a> года</span></p>
+                <p>Дата выпуска:
+                  <span class="date-color">с
+                    <a class="date-a" href="/catalog/releaseDate/{{AMS.releaseDate}}" title="Аниме онлайн {{AMS.releaseDate}} года">{{AMS.releaseDate}}</a>
+                    года
+                  </span>
+                </p>
               </div>
-
-              <div class="status">
-                <p>Статус: <span class="date-color">{{product.status}}</span></p>
-              </div>
+              <div class="status"><p>Статус: <span class="date-color">{{AMS.status}}</span></p></div>
+              <div class="rating"><p>Рейтинг: <span class="date-color">{{AMS.rating}}</span></p></div>
             </div>
 
             <div class="col-1">
-              <div class="studio">
-                <p>Студия: <a class="date-a" href="/catalog/studio/{{product.studio}}" title="Студия аниме {{product.studio}}">{{product.studio}}</a></p>
-              </div>
+              <div class="studio"><p>Студия: <a class="date-a" href="/catalog/studio/{{AMS.studio}}" title="Студия аниме {{AMS.studio}}">{{AMS.studio}}</a></p></div>
 
               <div class="genre-tags">
-                <p>Жанр: <a class="date-a genre-name" href="https://online.animedia.tv/category/comedy" title="Жанр аниме онлайн Комедия">Комедия</a>
-                  <a class="date-a genre-name" href="https://online.animedia.tv/category/mistery" title="Жанр аниме онлайн Мистика">Мистика</a>
-                  <a class="date-a genre-name" href="https://online.animedia.tv/category/advanture" title="Жанр аниме онлайн Приключения">Приключения</a>
-                  <a class="date-a genre-name" href="https://online.animedia.tv/category/fantasy" title="Жанр аниме онлайн Фэнтези">Фэнтези</a></p>
+                <p class="ell">Жанр:
+                  <a class="date-a genre-name" href="" title="Жанр аниме онлайн Комедия">Комeдия</a>
+                  <a class="date-a genre-name" href="" title="Жанр аниме онлайн Мистика">Мистика</a>
+                  <a class="date-a genre-name" href="" title="Жанр аниме онлайн Приключения">Приключения</a>
+                  <a class="date-a genre-name" href="" title="Жанр аниме онлайн Фэнтези">Фэнтези</a></p>
+              </div>
+
+              <div class="viewCount">
+                <p>Просмотров: <span class="date-color">{{AMS.viewCount}}</span></p>
               </div>
             </div>
           </div>
@@ -51,53 +55,71 @@
         <h3 class="media__sshots__title h3">Скриншоты</h3>
         <div class="media__sshots__list">
           <li class="media__sshots__list__item">
-            <a href="" title="Увеличить" class="zoomLink">
-              <img data-src=""
-                   alt="Скриншот аниме {{product.name}}"
-                   title="Скриншот из аниме {{product.name}}"
-                   class="loaded"
-                   src="https://static.animedia.tv/uploads/13851/00000002.jpg?w=175">
+            <a href="{{AMS.screen_1_1}}" title="Увеличить" class="zoomLink">
+              <img alt="Скриншот аниме {{AMS.name}}" title="Скриншот из аниме {{AMS.name}}" class="loaded" src="{{AMS.screen_1_1}}">
             </a>
           </li>
+
           <li class="media__sshots__list__item">
-            <a href="" title="Увеличить" class="zoomLink">
-              <img data-src=""
-                   alt="Скриншот аниме {{product.name}}"
-                   title="Скриншот из аниме {{product.name}}"
-                   class="loaded"
-                   src="https://static.animedia.tv/uploads/13851/00000002.jpg?w=175">
+            <a href="{{AMS.screen_1_2}}" title="Увеличить" class="zoomLink">
+              <img alt="Скриншот аниме {{AMS.name}}" title="Скриншот из аниме {{AMS.name}}" class="loaded" src="{{AMS.screen_1_2}}">
             </a>
           </li>
+
           <li class="media__sshots__list__item">
-            <a href="" title="Увеличить" class="zoomLink">
-              <img data-src=""
-                   alt="Скриншот аниме {{product.name}}"
-                   title="Скриншот из аниме {{product.name}}"
-                   class="loaded"
-                   src="https://static.animedia.tv/uploads/13851/00000002.jpg?w=175">
+            <a href="{{AMS.screen_1_3}}" title="Увеличить" class="zoomLink">
+              <img alt="Скриншот аниме {{AMS.name}}" title="Скриншот из аниме {{AMS.name}}" class="loaded" src="{{AMS.screen_1_3}}">
             </a>
           </li>
+
           <li class="media__sshots__list__item">
-            <a href="" title="Увеличить" class="zoomLink">
-              <img data-src=""
-                   alt="Скриншот аниме {{product.name}}"
-                   title="Скриншот из аниме {{product.name}}"
-                   class="loaded"
-                   src="https://static.animedia.tv/uploads/13851/00000002.jpg?w=175">
+            <a href="{{AMS.screen_1_4}}" title="Увеличить" class="zoomLink">
+              <img alt="Скриншот аниме {{AMS.name}}" title="Скриншот из аниме {{AMS.name}}" class="loaded" src="{{AMS.screen_1_4}}">
             </a>
           </li>
+
           <li class="media__sshots__list__item">
-            <a href="" title="Увеличить" class="zoomLink">
-              <img data-src=""
-                   alt="Скриншот аниме {{product.name}}"
-                   title="Скриншот из аниме {{product.name}}"
-                   class="loaded"
-                   src="https://static.animedia.tv/uploads/13851/00000002.jpg?w=175">
+            <a href="{{AMS.screen_1_5}}" title="Увеличить" class="zoomLink">
+              <img data-src="{{AMS.screen_1_5}}" alt="Скриншот аниме {{AMS.name}}" title="Скриншот из аниме {{AMS.name}}" class="loaded" src="{{AMS.screen_1_5}}">
             </a>
           </li>
         </div>
       </div>
       <!-- Media screenshots End-->
+
+      <div class="widget">
+        <div class="commet__sshots">
+          <h3 class="commet__sshots__title h3">Оставить комментарий</h3>
+        </div>
+
+        <div class="commet-list">
+          <div class="commet-item">
+            <h3 class="commet__item__username h3-user">User-Admin-100</h3>
+            <h3 class="commet__item__text">
+              Я всегда относился с презрением к аниме, но посмотрев этот великолепный сериал..я осознал как сильно
+              ошибался.. В нем нет пошлятины, нет гипертрофированной милоты граничащей с идиотизмом. В нем есть дельта
+              глубокой проработки характера героя от времени и захватывающий сюжет. Это прекрасная работа, лично для
+              меня открыла мир анимационной мультипликации.
+            </h3>
+          </div>
+
+          <div class="commet-item">
+            <h3 class="commet__item__username h3-user">mihanbo</h3>
+            <h3 class="commet__item__text">
+              МОЯ ДУША ТРЕПЕЩЕТ....
+              Шикарное аниме,рисовка,бои,сюжет все выполнено мастерски,сериал сначала завораживает потом берет задушу и
+              становится грустно,потом снова экшен и хеппи энд!жду второй сезон!
+            </h3>
+          </div>
+
+          <div class="commet-item" *ngFor="let comment of comments">
+            <h3 class="commet__item__username h3-user">{{comment.id_user}}</h3>
+            <h3 class="commet__item__text">
+              {{comment.comment}}
+            </h3>
+          </div>
+        </div>
+      </div>
       <!-- Media sub information-->
     </div>
   </div>
@@ -108,20 +130,76 @@
     <div class="widget">
       <div class="widget__post-info">
         <div class="widget__post-info__poster">
-          <img src="{{product.image1}}" width="280">
+          <img src="{{AMS.image1}}" width="280">
         </div>
 
-        <div class="widget__post-info__rating">
-
-        </div>
+        <div class="widget__post-info__rating"></div>
 
         <div class="widget__post-info__btns">
           <button type="button" class="btn btn-dark">СМОТРЕТЬ ТРЕЙЛЕР</button>
           <button type="button" class="btn btn-red">МНЕ НРАВИТСЯ!</button>
           <button type="button" class="btn btn-green">В ЗАКЛАДКИ</button>
+
+          <button type="button" class="btn btn-dark" onclick="document.getElementById('id01').style.display='block'">Change Name</button>
+          <button type="button" class="btn btn-dark" (click)="goBack()">GO Back</button>
         </div>
       </div>
     </div>
-    <!-- Post info widget End-->
+    <!-- Post info widget End -->
+
+    <div class="widget">
+      <div class="info-r"><h1>Релиз озвучивали</h1></div>
+      <div class="info-voicers">
+        <a href="" title="FREYA">FREYA</a>
+        <a href="" title="NAZEL">NAZEL</a>
+      </div>
+
+    </div>
+
+    <!-- Most popular widget -->
+    <div class="widget">
+      <div class="info-r"><h1>Самое популярное</h1></div>
+      <div class="widget__most-popular">
+        <!-- Most popular widget item-->
+        <div class="widget__most-popular__item widget__item" *ngFor="let popularAnime of popularAnimes">
+          <div class="widget__most-popular__item__info">
+            <a routerLink="/anime/{{popularAnime.id}}" title="{{popularAnime.name}}" class="h4 widget__most-popular__item__title">{{popularAnime.name}}</a>
+            <div class="genre-tags">
+              <a href="" title="Драма">Драма</a>
+              <a href="" title="Повседневность">Повседневность</a>
+              <a href="" title="Романтик">Романтик</a>
+            </div>
+          </div>
+          <div class="widget__most-popular__item__rating">{{popularAnime.rating}}</div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+
+
+
+<!-- Change Name -->
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="" method="patch">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label class="label-h" for="newName">Name:
+        <input type="text" [(ngModel)]="AMS.name" placeholder="name" name="newName" required/>
+      </label>
+
+      <label class="label-h" for="newRating">Rating:
+        <input type="number" [(ngModel)]="AMS.rating" placeholder="rating" name="newRating" required/>
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <!-- <button (click)="save()" type="button" class="btn btn-green button2">SAVE</button> -->
+    </div>
+  </form>
+
 </div>

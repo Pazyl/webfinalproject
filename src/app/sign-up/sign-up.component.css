@@ -1,0 +1,38 @@
+.box {
+  border-radius: 7px;
+  background-color: #141213;
+  padding: 20px;
+  color: #fff;
+}
+
+.label {
+  display: block;
+}
+
+.input {
+  margin-top: 5px;
+  border: 1px solid #fff;
+  background: rgba(0,0,0,0.9);
+  padding: 5px;
+  border-radius: 3px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.button {
+  display: block;
+  border: 1px solid #fff;
+  background: rgba(0,0,0,0.9);
+  padding: 10px;
+  border-radius: 3px;
+  color: #FFFFFF;
+  width: 212px;
+}
+
+.small {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 0;
+  color: #ff134b;
+}

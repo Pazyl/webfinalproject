@@ -1,3 +1,4 @@
+
 .content-container {
   width: 100%;
   height: 100%;
@@ -15,7 +16,6 @@
 
 .media {
   padding-top: 20.012px;
-  padding-bottom: 240px;
   color: #797979;
 }
 
@@ -78,7 +78,7 @@ h1 {
 }
 
 p {
-  margin: 0px 0px 15px;
+  margin: 0 0 15px;
   display: block;
   font-family: 'Open Sans', sans-serif;
 }
@@ -93,8 +93,7 @@ p {
 
 .right-sidebar {
   width: 310px;
-  height: 4268px;
-  margin: 0px;
+  margin: 0;
   padding: 27px 10px 20px 10px;
   background: #f5f5f5f5;
   display: block;
@@ -121,7 +120,7 @@ p {
   color: #FAFAFA;
   cursor: pointer;
   text-align: center;
-  padding: 0px;
+  padding: 0;
   margin-bottom: 7px;
   border: 1px solid transparent;
   font-weight: bold;
@@ -156,6 +155,15 @@ p {
   font-family: 'leagueGothic', sans-serif;
   line-height: 1;
   font-weight: normal;
+}
+
+.span-h3 {
+  color: #E70C2F;
+  margin: 0;
+  font-family: 'leagueGothic', sans-serif;
+  line-height: 1;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .widget__post-info__voicers__title {
@@ -199,7 +207,7 @@ p {
   display: block;
   float: left;
   width: 160.813px;
-  height: 0px;
+  height: 0;
   padding: 5px 6.987px 0;
 }
 
@@ -255,7 +263,7 @@ nav h3 a:hover {
 }
 
 .info-p {
-  margin: 0px 0px 15px;
+  margin: 0 0 15px;
   display: block;
   font-family: 'Open Sans', sans-serif;
 }
@@ -274,4 +282,116 @@ nav h3 a:hover {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1;
+}
+
+.info-r {
+  margin-bottom: 15px;
+}
+
+.info-r h1 {
+  margin: 0;
+  color: #292929;
+  font-size: 1.5em;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.widget__most-popular {
+  width: 310px;
+  margin: 0 -10px;
+}
+
+.widget__most-popular .widget__item {
+  padding-top: 14.488px;
+  padding-bottom: 14.488px;
+}
+
+.widget__most-popular__item:nth-child(odd) {
+  background-color: #EDEDED;
+}
+
+.widget__most-popular__item {
+  display: table;
+  width: 100%;
+}
+.widget__item {
+  padding: 10px;
+}
+
+.widget__most-popular__item__info {
+  padding-right: 18.725px;
+}
+
+.widget__most-popular__item__info, .widget__most-popular__item__rating {
+  display: table-cell;
+}
+
+.widget .h4 {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.widget__most-popular__item__title {
+  margin-bottom: 3px;
+  line-height: 0.916666667em;
+}
+
+.h4 {
+  margin: 0;
+  color: #292929;
+  font-size: 16px;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.h4:hover {
+  color: #E70C2F;
+}
+
+.widget__most-popular__item__rating {
+  font-family: 'leagueGothic', sans-serif;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 36px;
+  color: #E70C2F;
+  vertical-align: middle;
+  text-align: right;
+  display: table-cell;
+}
+
+.widget__most-popular__item .genre-tags {
+  width: 230px;
+  font-size: 0.857142857em;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 1px;
+  text-overflow: ellipsis;
+  letter-spacing: -0.001em;
+  color: #AFAEAE;
+}
+
+.genre-tags a {
+  font-family: 'bebasNeue', sans-serif;
+  position: relative;
+  margin-right: 7px;
+  color: #FF0000;
+  text-decoration: none;
+}
+
+.genre-tags a:hover {
+  text-decoration: underline;
+}
+
+.genre-tags a:after {
+  content: ', ';
+  right: -2px;
+}
+
+.genre-tags a:last-child:after{
+  content: '';
 }

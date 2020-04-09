@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 101,
+      "username": "yerbo",
+      "password": "pass",
+      "name": "null",
+      "roleID": 1,
+      "genre": "male",
+      "subs": "none",
+      "birthday": null,
+      "phone": "none",
+      "about": "none"
+    }
+  ]
+}
