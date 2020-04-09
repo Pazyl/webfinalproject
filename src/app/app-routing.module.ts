@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'movies', component: MoviesComponent },
   { path: 'serials', component: SerialsComponent },
   { path: ':api/:id', component: AnimeDetailComponent },
-  { path: 'account', component: AccountComponent }
+  { path: 'account', component: AccountComponent },
 ];
 
 @NgModule({

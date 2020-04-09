@@ -51,16 +51,32 @@
     </div>
 
     <!-- Likes -->
-    <div *ngIf="trueLikes">
-      <div *ngFor="let like of likes">
-        <p>{{like.name}}</p>
+    <div class="box-animes" *ngIf="trueLikes">
+      <h1 class="h1 rd">Likes</h1>
+      <div class="items">
+        <div class="view" *ngFor="let like of likes">
+          <img src="{{like.image1}}" class="image1">
+          <nav>
+            <h3 class="h3">
+              <a routerLink="/{{like.catalogType}}/{{like.id}}" class="h3">{{like.name}}</a>
+            </h3>
+          </nav>
+        </div>
       </div>
     </div>
 
     <!-- Zakladki -->
-    <div *ngIf="trueZakladki">
-      <div *ngFor="let zaktadka of zaktadki">
-        <p>{{zaktadka.name}}</p>
+    <div class="box-animes" *ngIf="trueZakladki">
+      <h1 class="h1 rd">Zakladki</h1>
+      <div class="items">
+        <div class="view" *ngFor="let zaktadka of zaktadki">
+          <img src="{{zaktadka.image1}}" class="image1">
+          <nav>
+            <h3 class="h3">
+              <a routerLink="/{{zaktadka.catalogType}}/{{zaktadka.id}}" class="h3">{{zaktadka.name}}</a>
+            </h3>
+          </nav>
+        </div>
       </div>
     </div>
   </div>

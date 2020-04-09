@@ -12,17 +12,19 @@ export class HomeComponent implements OnInit {
   animes: Movie[];
   movies: Movie[];
   serials: Movie[];
+
   index1 = 0;
   index2 = 4;
-  lenght1;
-  lenght2;
-  lenght3;
 
   index12 = 0;
   index22 = 4;
 
   index13 = 0;
   index23 = 4;
+
+  lenght1;
+  lenght2;
+  lenght3;
 
   constructor(private productService: ProductService) {
   }

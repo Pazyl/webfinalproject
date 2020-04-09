@@ -34,7 +34,7 @@ import { AccountComponent } from './account/account.component';
     SerialsComponent,
     SignInComponent,
     SignUpComponent,
-    AccountComponent
+    AccountComponent,
   ],
   imports: [
     BrowserModule,

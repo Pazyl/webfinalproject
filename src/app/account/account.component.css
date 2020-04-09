@@ -16,7 +16,6 @@
 
 .media {
   padding-top: 20.012px;
-  padding-bottom: 240px;
   color: #797979;
 }
 
@@ -43,7 +42,6 @@ h1 {
   font-size: 36px;
   font-family: 'bebasNeue', sans-serif;
   font-weight: 700;
-  line-height: 64px;
   text-transform: uppercase;
   line-height: 1;
 }
@@ -511,4 +509,68 @@ input[type=text], input[type=password], input[type=number], input[type=email], i
   text-transform: uppercase;
   line-height: 1;
   text-decoration: none;
+}
+
+.box-animes {
+  background-color: #FFFFFF;
+  margin: 0 -15px;
+  padding: 30px 0 0 0;
+  border-bottom: 4px solid #E70C2F;
+}
+
+.items {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.view {
+  width: 281px;
+  margin: 0;
+  border: 0;
+  padding: 0 7px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.image1 {
+  width: 280px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #E70C2F;
+}
+
+.h3 {
+  width: 280px;
+  margin: 7px 0;
+  color: #292929;
+  font-family: 'bebasNeue', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rd {
+  display: inline-flex;
+}
+
+.h1 {
+  margin: 15px 0;
+  color: #292929;
+  font-size: 36px;
+  font-family: 'bebasNeue', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  width: 100%;
 }

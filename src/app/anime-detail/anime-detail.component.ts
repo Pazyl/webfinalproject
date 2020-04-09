@@ -73,11 +73,6 @@ export class AnimeDetailComponent implements OnInit {
     });
   }
 
-  /*save(): void {
-    this.productService.updateProduct(this.product)
-      .subscribe(() => this.goBack() );
-  }*/
-
   addComment() {
     let text = this.text;
     let idMovie = this.AMS.id;
