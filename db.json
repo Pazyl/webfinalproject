@@ -4,19 +4,23 @@
       "id": 1,
       "username": "yerbo",
       "password": "pass",
-      "firstname": "Yerbolatt",
-      "lastname": "Pazyll",
+      "firstname": "Yerbolat",
+      "lastname": "Pazyl",
       "roleID": 100,
       "email": "jalqaw.p@gmail.com",
       "gender": "Male",
       "phone": "87083760122",
-      "birthday": "2000-01-26",
+      "birthday": "2000-01-15",
       "likes": [
-        45
+        45,
+        43,
+        9
       ],
       "zakladki": [
         10,
-        45
+        45,
+        43,
+        9
       ]
     },
     {
@@ -34,11 +38,22 @@
         2,
         8,
         4,
-        5
+        5,
+        41
       ],
       "zakladki": [
-        8
+        8,
+        41
       ]
+    },
+    {
+      "username": "muni",
+      "password": "pass",
+      "id": 3,
+      "firstname": "Munira",
+      "lastname": "Kosimova",
+      "email": "jalqaw.p@gmail.com",
+      "gender": "Female"
     }
   ],
   "movies": [
@@ -601,6 +616,30 @@
       "movieID": 2,
       "text": "Yerbolat input",
       "id": 3
+    },
+    {
+      "userName": "nurbo",
+      "movieID": 11,
+      "text": "eewfr  rg erg e",
+      "id": 4
+    },
+    {
+      "userName": "yerbo",
+      "movieID": 43,
+      "text": "Yerbolat input",
+      "id": 5
+    },
+    {
+      "userName": "yerbo",
+      "movieID": 9,
+      "text": "dfsfdsfs",
+      "id": 6
+    },
+    {
+      "userName": "muni",
+      "movieID": 10,
+      "text": "Munira Bomba 1808K",
+      "id": 7
     }
   ]
 }
