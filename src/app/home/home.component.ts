@@ -9,9 +9,9 @@ import { ProductService } from 'src/app/product.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  animes: Movie[];
-  movies: Movie[];
-  serials: Movie[];
+  animes: Movie[] = [];
+  movies: Movie[] = [];
+  serials: Movie[] = [];
 
   index1 = 0;
   index2 = 4;
@@ -37,20 +37,26 @@ export class HomeComponent implements OnInit {
 
   getAnimes(): void {
     this.productService.getAnimes()
-      .subscribe(animes => this.animes = animes);
-    this.lenght1 = this.animes.length;
+      .subscribe(animes => {
+        this.animes = animes;
+        this.lenght1 = this.animes.length;
+      });
   }
 
   getMovies(): void {
     this.productService.getMovies()
-      .subscribe(movies => this.movies = movies);
-    this.lenght2 = this.movies.length;
+      .subscribe(movies => {
+        this.movies = movies;
+        this.lenght2 = this.movies.length;
+      });
   }
 
   getSerials(): void {
     this.productService.getSerials()
-      .subscribe(serials => this.serials = serials);
-    this.lenght3 = this.serials.length;
+      .subscribe(serials => {
+        this.serials = serials;
+        this.lenght3 = this.serials.length;
+      });
   }
 
   plus(n, m): void {

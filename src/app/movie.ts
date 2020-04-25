@@ -1,8 +1,10 @@
+import { Catalog } from './catalog';
+
 export interface Movie {
   id: number;
   name: string;
   alterName: string;
-  catalogType: string;
+  catalogType: Catalog;
   price: number;
   rating: number;
   viewCount: number;

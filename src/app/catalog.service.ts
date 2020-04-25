@@ -7,20 +7,21 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class CatalogService {
+  private path = 'http://127.0.0.1:8000/api/';
 
   constructor(private http: HttpClient) {
   }
 
   getFind(str: string): Observable<Movie[]> {
     console.log(str);
-    return this.http.get<Movie[]>('http://localhost:3000/movies?' + str);
+    return this.http.get<Movie[]>(this.path + 'movies?' + str);
   }
 
   getAllFilms(): Observable<Movie[]> {
-    return this.http.get<Movie[]>('http://localhost:3000/movies');
+    return this.http.get<Movie[]>(this.path + 'movies');
   }
 
   deleteAnime(id): Observable<Movie[]> {
-    return this.http.delete<Movie[]>('http://localhost:3000/movies/' + id);
+    return this.http.delete<Movie[]>(this.path + 'movies/' + id + '/');
   }
 }

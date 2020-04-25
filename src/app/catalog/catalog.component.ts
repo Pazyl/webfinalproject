@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CatalogService} from '../catalog.service';
-import {Movie} from '../movie';
-import {ControlDbService} from '../control-db.service';
+import { CatalogService } from '../catalog.service';
+import { Movie } from '../movie';
+import { ControlDbService } from '../control-db.service';
 
 
 @Component({

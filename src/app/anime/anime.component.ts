@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Movie } from 'src/app/movie';
 import { ProductService } from 'src/app/product.service';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {ControlDbService} from '../control-db.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ControlDbService } from '../control-db.service';
 
 @Component({
   selector: 'app-anime',
@@ -14,7 +14,7 @@ export class AnimeComponent implements OnInit {
   animes: Movie[];
   popularAnimes: Movie[];
   form: FormGroup;
-  seledImg = null;
+  // seledImg = null;
   admin = false;
 
   constructor(private productService: ProductService, private formBuilder: FormBuilder, private service: ControlDbService) {

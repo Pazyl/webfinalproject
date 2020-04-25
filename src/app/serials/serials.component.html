@@ -17,7 +17,7 @@
             <div class="ads-list__item__thumb"><img src="{{serial.image1}}" style="width: 280px"></div>
 
             <nav>
-              <h3 class="h3 ads-list__item__title"><a routerLink="/{{serial.catalogType}}/{{serial.id}}" title="{{serial.name}}" class="h3 ads-list__item__title">{{serial.name}}</a></h3>
+              <h3 class="h3 ads-list__item__title"><a routerLink="/{{serial.catalogType.api}}/{{serial.id}}" title="{{serial.name}}" class="h3 ads-list__item__title">{{serial.name}}</a></h3>
             </nav>
           </div>
         </div>
@@ -80,7 +80,7 @@
         <!-- Most popular widget item-->
         <div class="widget__most-popular__item widget__item" *ngFor="let pSerial of popularSerials">
           <div class="widget__most-popular__item__info">
-            <a routerLink="/{{pSerial.catalogType}}/{{pSerial.id}}" title="{{pSerial.name}}" class="h4 widget__most-popular__item__title">{{pSerial.name}}</a>
+            <a routerLink="/{{pSerial.catalogType.api}}/{{pSerial.id}}" title="{{pSerial.name}}" class="h4 widget__most-popular__item__title">{{pSerial.name}}</a>
             <div class="genre-tags">
               <a href="" title="Драма">Драма</a>
               <a href="" title="Повседневность">Повседневность</a>

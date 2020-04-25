@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ControlDbService } from './control-db.service';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'

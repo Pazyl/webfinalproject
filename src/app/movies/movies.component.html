@@ -17,7 +17,7 @@
             <div class="ads-list__item__thumb"><img src="{{m.image1}}" style="width: 280px"></div>
             <nav>
               <h3 class="h3 ads-list__item__title">
-                <a routerLink="/{{m.catalogType}}/{{m.id}}" title="{{m.name}}" class="h3 ads-list__item__title">{{m.name}}</a>
+                <a routerLink="/{{m.catalogType.api}}/{{m.id}}" title="{{m.name}}" class="h3 ads-list__item__title">{{m.name}}</a>
               </h3>
             </nav>
           </div>
@@ -81,7 +81,7 @@
         <!-- Most popular widget item-->
         <div class="widget__most-popular__item widget__item" *ngFor="let pMovie of popularMovies">
           <div class="widget__most-popular__item__info">
-            <a routerLink="/{{pMovie.catalogType}}/{{pMovie.id}}" title="{{pMovie.name}}" class="h4 widget__most-popular__item__title">{{pMovie.name}}</a>
+            <a routerLink="/{{pMovie.catalogType.api}}/{{pMovie.id}}" title="{{pMovie.name}}" class="h4 widget__most-popular__item__title">{{pMovie.name}}</a>
             <div class="genre-tags">
               <a href="" title="Драма">Драма</a>
               <a href="" title="Повседневность">Повседневность</a>

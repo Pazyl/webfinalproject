@@ -6,10 +6,10 @@ import { Location } from '@angular/common';
 import { Movie } from '../movie';
 import { Comment } from '../comment';
 import { ProductService } from '../product.service';
-import {ControlDbService} from '../control-db.service';
-import {User} from '../Objects/user';
-import {AuthService} from '../auth.service';
-import {AddListService} from '../add-list.service';
+import { ControlDbService } from '../control-db.service';
+import { User } from '../Objects/user';
+import { AuthService } from '../auth.service';
+import { AddListService } from '../add-list.service';
 
 @Component({
   selector: 'app-anime-detail',
@@ -33,7 +33,7 @@ export class AnimeDetailComponent implements OnInit {
     private productService: ProductService,
     private location: Location,
     private service: ControlDbService,
-    private service_list: AddListService
+    private serviceList: AddListService
   ) { }
 
   ngOnInit(): void {
@@ -42,7 +42,7 @@ export class AnimeDetailComponent implements OnInit {
     this.getComments();
     this.getJsonComments();
     this.setAdmin();
-    this.changeViewCount();
+    // this.changeViewCount();
   }
 
   getAnimeOrMovieOrSerial(): void {
@@ -103,21 +103,21 @@ export class AnimeDetailComponent implements OnInit {
     });
   }
 
-  changeViewCount() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.productService.changeViewCount(id)
-      .subscribe(film => this.AMS.viewCount = this.AMS.viewCount + 1);
-  }
+  // changeViewCount() {
+  //   const id = +this.route.snapshot.paramMap.get('id');
+  //   this.productService.changeViewCount(id)
+  //     .subscribe(film => this.AMS.viewCount = this.AMS.viewCount + 1);
+  // }
 
   addLikes(id: number) {
     this.service.getActivUser(parseInt(localStorage.getItem('userID'))).subscribe(res => {
-      this.service_list.addLike(res.id, id);
+      this.serviceList.addLike(res.id, id);
     });
   }
 
   addZakladki(id: number) {
     this.service.getActivUser(parseInt(localStorage.getItem('userID'))).subscribe(res => {
-      this.service_list.addZakladki(res.id, id);
+      this.serviceList.addZakladki(res.id, id);
     });
   }
 }

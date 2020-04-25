@@ -1,6 +1,8 @@
+import { User } from './User';
+
 export interface Comment {
   id: number;
-  userName: string;
+  userName: User;
   movieID: number;
   text: string;
 }

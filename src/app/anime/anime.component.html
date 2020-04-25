@@ -21,7 +21,7 @@
 
             <nav>
               <h3 class="h3 ads-list__item__title">
-                <a routerLink="/{{anime.catalogType}}/{{anime.id}}" title="{{anime.name}}" class="h3 ads-list__item__title">{{anime.name}}</a>
+                <a routerLink="/{{anime.catalogType.api}}/{{anime.id}}" title="{{anime.name}}" class="h3 ads-list__item__title">{{anime.name}}</a>
               </h3>
             </nav>
           </div>
@@ -96,7 +96,7 @@
         <!-- Most popular widget item-->
         <div class="widget__most-popular__item widget__item" *ngFor="let pAnime of popularAnimes">
           <div class="widget__most-popular__item__info">
-            <a routerLink="/{{pAnime.catalogType}}/{{pAnime.id}}" title="{{pAnime.name}}" class="h4 widget__most-popular__item__title">{{pAnime.name}}</a>
+            <a routerLink="/{{pAnime.catalogType.api}}/{{pAnime.id}}" title="{{pAnime.name}}" class="h4 widget__most-popular__item__title">{{pAnime.name}}</a>
             <div class="genre-tags">
               <a href="" title="Драма">Драма</a>
               <a href="" title="Повседневность">Повседневность</a>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {ControlDbService} from './control-db.service';
-import {User} from './Objects/user';
+import { ControlDbService } from './control-db.service';
+import { User } from './Objects/user';
 
 @Injectable({
   providedIn: 'root'
